@@ -1,0 +1,108 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Sun Dec  7 21:15:58 2025
+| Host         : Yash-Mahto running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ntt_top_control_sets_placed.rpt
+| Design       : ntt_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    61 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    30 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |    13 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            9 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              47 |           15 |
+| Yes          | No                    | No                     |             207 |           91 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              85 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+|  Clock Signal  |          Enable Signal          |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | ntt_inst/data[7][3]_i_1_n_0     |                             |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG | ntt_inst/data[7][3]_i_1_n_0     | ntt_inst/data[7][1]_i_1_n_0 |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG | ntt_inst/data[8][6]_i_2_n_0     |                             |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG | uart_inst/blink_state_reg[2][0] | rst_IBUF                    |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ntt_inst/data[8][6]_i_2_n_0     | ntt_inst/data[8][6]_i_1_n_0 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | uart_inst/E[0]                  | rst_IBUF                    |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | ntt_inst/data[2][6]_i_2_n_0     | ntt_inst/data[2][6]_i_1_n_0 |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | ntt_inst/data[1][6]_i_2_n_0     | ntt_inst/data[1][6]_i_1_n_0 |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | ntt_inst/data[4][6]_i_2_n_0     | ntt_inst/data[4][6]_i_1_n_0 |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | ntt_inst/i                      | ntt_inst/i[4]_i_1_n_0       |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | uart_inst/tx_buffer[6]_i_1_n_0  |                             |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | uart_inst/digit_index_reg[0][0] |                             |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | ntt_inst/data[10][6]_i_1_n_0    |                             |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | ntt_inst/data[0][6]_i_1_n_0     |                             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | ntt_inst/data[11][6]_i_1_n_0    |                             |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | ntt_inst/data[12][6]_i_1_n_0    |                             |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | ntt_inst/data[14][6]_i_1_n_0    |                             |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | ntt_inst/data[15][6]_i_1_n_0    |                             |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | ntt_inst/data[13][6]_i_1_n_0    |                             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | ntt_inst/data[3][6]_i_1_n_0     |                             |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | ntt_inst/data[6][6]_i_1_n_0     |                             |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG | ntt_inst/data[5][6]_i_1_n_0     |                             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | ntt_inst/data[9][6]_i_1_n_0     |                             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | ntt_inst/E[0]                   | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | delay_counter                   | rst_IBUF                    |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG |                                 |                             |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG |                                 | rst_IBUF                    |                9 |             23 |         2.56 |
+|  clk_IBUF_BUFG |                                 | blink_counter[0]_i_1_n_0    |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | pause_counter                   | rst_IBUF                    |                7 |             28 |         4.00 |
+|  clk_IBUF_BUFG | ntt_inst/result_0[6]_i_1_n_0    |                             |               39 |            112 |         2.87 |
++----------------+---------------------------------+-----------------------------+------------------+----------------+--------------+
+
+

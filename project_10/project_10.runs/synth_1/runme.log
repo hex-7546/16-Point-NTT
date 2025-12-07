@@ -1,0 +1,308 @@
+
+*** Running vivado
+    with args -log ntt_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ntt_top.tcl
+
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sun Dec  7 21:11:59 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ntt_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 492.871 ; gain = 213.227
+Command: read_checkpoint -auto_incremental -incremental {D:/Computer Science/Vivado/project_10/project_10.srcs/utils_1/imports/synth_1/ntt_top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Computer Science/Vivado/project_10/project_10.srcs/utils_1/imports/synth_1/ntt_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ntt_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 384
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1194.887 ; gain = 495.102
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10929] literal value 'd300_000_000 truncated to fit in 28 bits [D:/NTT/ntt_fpga/ntt_top.v:249]
+INFO: [Synth 8-6157] synthesizing module 'ntt_top' [D:/NTT/ntt_fpga/ntt_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ntt_16point' [D:/NTT/ntt_fpga/ntt_16point.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_16point' (0#1) [D:/NTT/ntt_fpga/ntt_16point.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/NTT/ntt_fpga/uart_tx.v:1]
+INFO: [Synth 8-226] default block is never used [D:/NTT/ntt_fpga/uart_tx.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [D:/NTT/ntt_fpga/uart_tx.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/NTT/ntt_fpga/ntt_top.v:139]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/NTT/ntt_fpga/ntt_top.v:157]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/NTT/ntt_fpga/ntt_top.v:208]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/NTT/ntt_fpga/ntt_top.v:137]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/NTT/ntt_fpga/ntt_top.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'ntt_top' (0#1) [D:/NTT/ntt_fpga/ntt_top.v:1]
+WARNING: [Synth 8-6014] Unused sequential element m_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:168]
+WARNING: [Synth 8-6014] Unused sequential element k_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:169]
+WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:170]
+WARNING: [Synth 8-6014] Unused sequential element twiddle_idx_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:174]
+WARNING: [Synth 8-6014] Unused sequential element tw_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:175]
+WARNING: [Synth 8-6014] Unused sequential element t_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:176]
+WARNING: [Synth 8-6014] Unused sequential element u_reg was removed.  [D:/NTT/ntt_fpga/ntt_16point.v:177]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1315.094 ; gain = 615.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1315.094 ; gain = 615.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1315.094 ; gain = 615.309
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1315.094 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/NTT/ntt_fpga/arty_a7_100t.xdc]
+Finished Parsing XDC File [D:/NTT/ntt_fpga/arty_a7_100t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/NTT/ntt_fpga/arty_a7_100t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ntt_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ntt_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1396.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1396.164 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1396.164 ; gain = 696.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1396.164 ; gain = 696.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1396.164 ; gain = 696.379
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ntt_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+               START_BIT |                               01 |                               01
+               DATA_BITS |                               10 |                               10
+                STOP_BIT |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00010 |                              000
+                 COMPUTE |                            10000 |                              001
+                TRANSMIT |                            01000 |                              010
+                    DONE |                            00100 |                              011
+                   PAUSE |                            00001 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ntt_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1396.164 ; gain = 696.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               28 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 32    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   5 Input   28 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
+	  16 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	  17 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 18    
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 6     
+	   4 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 45    
+	   4 Input    1 Bit        Muxes := 13    
+	  16 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 1453.410 ; gain = 753.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1528.938 ; gain = 829.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1627.684 ; gain = 927.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 1637.738 ; gain = 937.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    38|
+|3     |LUT1   |     2|
+|4     |LUT2   |    93|
+|5     |LUT3   |    40|
+|6     |LUT4   |    56|
+|7     |LUT5   |    88|
+|8     |LUT6   |   313|
+|9     |MUXF7  |    28|
+|10    |MUXF8  |    13|
+|11    |FDRE   |   349|
+|12    |FDSE   |     6|
+|13    |IBUF   |     2|
+|14    |OBUF   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:58 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1795.609 ; gain = 1014.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:59 . Memory (MB): peak = 1795.609 ; gain = 1095.824
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1804.781 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1808.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c193e6b7
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:11 . Memory (MB): peak = 1808.445 ; gain = 1307.555
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 1808.445 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Computer Science/Vivado/project_10/project_10.runs/synth_1/ntt_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ntt_top_utilization_synth.rpt -pb ntt_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  7 21:13:53 2025...
